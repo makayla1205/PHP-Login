@@ -27,18 +27,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
-<body>
-    <form method="post" action="login.php">
-        <input type="text" id="email" placeholder="Email..."><br>
-        <input type="password" id="password" placeholder="Password..."><br>
-        <input type="button" value="Log In" id="login"><br>
-    </form>
+<body class="bg-dark">
+<div class="container-fluid bg-dark p-5">
+    <div class="container-fluid m-5 p-5 w-75 bg-light ">
+        <h3 class="display-5">Log In</h3>
+        <hr>
+            <form method="post" action="login.php">
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input class="form-control" type="text" id="email" placeholder="Email...">
+                    <div id="emailHelp" class="form-text"></div>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input class="form-control" type="password" id="password" placeholder="Password...">
+                    <div id="passwordHelp" class="form-text"></div>
+                </div>
+                <input class="btn btn-primary" type="button" value="Log In" id="login"><br>
+            </form>
+        <br>
+        <p>Don't have an account? <a href="signup.php">Sign Up</a></p>
+    </div>
+</div>
 
     <p id="response"></p>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <script>
         $(document).ready(function () {
             $("#login").on("click", function () {
